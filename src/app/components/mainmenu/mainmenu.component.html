@@ -4,7 +4,7 @@
     color: white;
   }
 </style>
-<div class="mainmenu" (click)="test()">
+<div class="mainmenu">
   <header class="mdl-layout__header mdl-layout__header--transparent">
     <div class="mdl-layout__header-row">
       <!-- Title -->
@@ -13,9 +13,9 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="/blog">Blog</a>
-        <a class="mdl-navigation__link" href="/projects">Projekte</a>
-        <a class="mdl-navigation__link" href="/aboutme">Über mich</a>
+        <a class="mdl-navigation__link" routerLink="/blog" routerLinkActive="active">Blog</a>
+        <a class="mdl-navigation__link" routerLink="/projects" routerLinkActive="active">Projekte</a>
+        <a class="mdl-navigation__link" routerLink="/aboutme" routerLinkActive="active">Über mich</a>
       </nav>
     </div>
   </header>
