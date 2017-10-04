@@ -8,6 +8,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "dist": "ng build && cp src/static/manifest.yml src/static/Staticfile dist",
     "e2e": "ng e2e"
   },
   "private": true,
