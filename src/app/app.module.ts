@@ -4,22 +4,23 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { AppComponent } from './app.component';
 import { MainmenuComponent } from './components/mainmenu/mainmenu.component';
-import { BlogDisplayComponent } from './components/blog-display/blog-display.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const routes: Routes = [
-  { path: "blog", component: BlogDisplayComponent },
-  { path: "**", component: BlogDisplayComponent }
+  { path: "blog", component: BlogComponent }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     MainmenuComponent,
-    BlogDisplayComponent
+    BlogComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes, { enableTracing: true })
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
