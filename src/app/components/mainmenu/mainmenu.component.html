@@ -1,22 +1,23 @@
 <style>
-  .mainmenu * {
-    background: rgba(0, 0, 0, 0.01);
+  .top-menu *{
+    background: rgba(0, 0, 0, 0);
+
+    /* To have the Name in the Top Right Corner clickable and return to home
+    without having to worry about wierd looks */
     text-decoration: none;
     color: white;
   }
 </style>
-<div class="mainmenu">
+<div class="top-menu">
   <header class="mdl-layout__header mdl-layout__header--transparent">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <a routerLink="" routerLinkActive="active"><span class="mdl-layout-title">Corvin Schapöhler</span></a>
+      <a routerLink=""><span class="mdl-layout-title">{{title}}</span></a>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" routerLink="/blog" routerLinkActive="active">Blog</a>
-        <a class="mdl-navigation__link" routerLink="/projects" routerLinkActive="active">Projekte</a>
-        <a class="mdl-navigation__link" routerLink="/aboutme" routerLinkActive="active">Über mich</a>
+      <nav class="mdl-navigation" *ngFor="let entry of entries">
+        <a class="mdl-navigation__link" routerLink="{{entry.linkTarget}}">{{entry.label}}</a>
       </nav>
     </div>
   </header>
