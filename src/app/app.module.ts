@@ -12,11 +12,12 @@ import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { ImpressumComponent } from './components/impressum/impressum.component';
 
 const routes: Routes = [
+  { path: "", component: MainPageContentComponent},
   { path: "blog", component: BlogComponent },
   { path: "projects", component: ProjectsComponent},
   { path: "aboutme", component: AboutmeComponent},
   { path: "impressum", component: ImpressumComponent},
-  { path: "**", component: MainPageContentComponent}
+  { path: "**", redirectTo: "", pathMatch: "full"}
 ]
 
 @NgModule({
