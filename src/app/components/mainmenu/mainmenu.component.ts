@@ -11,9 +11,9 @@ import { MenuEntry } from "../../data/menu-entry";
 export class MainmenuComponent {
   entries = [
     { label: "Blog", linkTarget: "/blog" },
-    { label: "Über mich", linkTarget: "/aboutme" },
-    { label: "Projekte", linkTarget: "/projects" },
-    { label: "Lebenslauf", linkTarget: "/resume"}
+    { label: "About Me", linkTarget: "/aboutme" },
+    { label: "Projects", linkTarget: "/projects" },
+    { label: "CV", linkTarget: "/resume"}
   ];
   title = "Corvin Schapöhler";
 }
